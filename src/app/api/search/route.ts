@@ -2,12 +2,16 @@ import { NextResponse } from 'next/server';
 import OpenAI from 'openai';
 import { client } from '@/sanity/client';
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+export const dynamic = 'force-dynamic';
 
 export async function POST(req: Request) {
   try {
+    const apiKey = process.env.OPENAI_API_KEY;
+    if (!apiKey) {
+      return NextResponse.json({ error: 'OpenAI API key not configured' }, { status: 503 });
+    }
+
+    const openai = new OpenAI({ apiKey });
     const { query } = await req.json();
 
     if (!query) {

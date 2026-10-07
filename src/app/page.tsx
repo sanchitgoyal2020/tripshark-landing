@@ -43,11 +43,11 @@ export default function Home() {
   
   // Hero Scrollytelling Refs
   const scrollyHeroRef = useRef<HTMLDivElement>(null);
-  const bg1Ref = useRef<HTMLDivElement>(null);
-  const bg2Ref = useRef<HTMLDivElement>(null);
-  const bg3Ref = useRef<HTMLDivElement>(null);
-  const bg4Ref = useRef<HTMLDivElement>(null);
-  const bg5Ref = useRef<HTMLDivElement>(null);
+  const bg1Ref = useRef<HTMLVideoElement>(null);
+  const bg2Ref = useRef<HTMLVideoElement>(null);
+  const bg3Ref = useRef<HTMLVideoElement>(null);
+  const bg4Ref = useRef<HTMLVideoElement>(null);
+  const bg5Ref = useRef<HTMLVideoElement>(null);
   
   const text1Ref = useRef<HTMLHeadingElement>(null);
   const text2Ref = useRef<HTMLHeadingElement>(null);
